@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chaap3D Clone</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/STLLoader.js"></script>
+</head>
+<body>
+
+<header>
+<h1>Chaap3D</h1>
+<p>3D Models Hub - Upload, Preview & Explore</p>
+</header>
+
+<nav>
+<button id="tabModels">Models</button>
+<button id="tabUpload">Upload</button>
+<button id="tabAuth">Login/Signup</button>
+</nav>
+
+<!-- Auth Section -->
+<section id="authSection">
+<h2>Login / Signup</h2>
+<input type="text" id="username" placeholder="Username">
+<input type="email" id="email" placeholder="Email">
+<input type="password" id="password" placeholder="Password">
+<button id="signupBtn">Sign Up</button>
+<button id="loginBtn">Login</button>
+</section>
+
+<!-- Models Section -->
+<section id="modelsSection">
+<h2>3D Models</h2>
+<select id="categoryFilter">
+<option value="">All Categories</option>
+<option value="Mechanical">Mechanical</option>
+<option value="Electronics">Electronics</option>
+<option value="Robotics">Robotics</option>
+</select>
+<input type="text" id="searchModel" placeholder="Search Models...">
+<div class="cards" id="modelCards"></div>
+<canvas id="preview3D"></canvas>
+</section>
+
+<!-- Upload Section -->
+<section id="uploadSection">
+<h2>Upload 3D Models</h2>
+<form id="uploadForm">
+<input type="text" id="modelName" placeholder="Model Name" required>
+<select id="modelType">
+<option value="free">Free</option>
+<option value="premium">Premium</option>
+</select>
+<input type="text" id="modelCategory" placeholder="Category">
+<input type="number" id="modelPrice" placeholder="Price USD (premium)">
+<input type="file" id="stlFiles" accept=".stl" multiple required>
+<input type="file" id="pdfFiles" accept=".pdf" multiple>
+<button type="submit">Upload</button>
+</form>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
